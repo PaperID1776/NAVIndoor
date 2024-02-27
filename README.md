@@ -9,3 +9,5 @@
 | **momentum**         | Inertial moment kept by the agent when changing direction.               | [0,1]           | 0       |
 | **decreasing_reward**| Decreases the reward when agent stays in contact with a collider (wall/obstacle). | True/False       | False   |
 | **coin_visible**     | Coins visibility by the camera.                                         | True/False       | True    |
+
+![Description of the GIF](https://github.com/PaperID1776/NAVIndoor/blob/main/explore.gif "Optional title")
