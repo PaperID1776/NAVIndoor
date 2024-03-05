@@ -16,6 +16,10 @@ def to_uint8_grayscale(img):
     img = np.array(127.5*(img.cpu().detach()+1)).astype(np.uint8)
     return(img)
 
+def to_tensor_grayscale(obs):
+    return((2*(torch.tensor(obs).squeeze(0) - 0.5)).mean(axis=0))
+
+
 class Segmenter:
     def __init__(self,ground=False):
         # Do to Unity compression (for fast running) we must threshold semantic maps to clean them.
@@ -102,7 +106,14 @@ class RLLearner:
                  n_frames = 3,
                 tau = 0.01,
                  budget = 100000,
-                env_settings = None,
+                env_settings = {"coin_proba":1, #parameters for the environments. 
+                 "increase_obstacle_proba":1, #Linear increase in obstacle proportion until max_obstacle_proba is reached
+                 "move_speed":[1,1], #Movement speed
+                 "turn_speed":[150,150], #Rotation speed
+                 "momentum":[0,0], #Inertial momentum
+                 "decrease_reward_on_stay":0, #decrease reward when OnStayCollided method is called
+                 "coin_visible":1, #Coins visibility
+                 "max_obstacle_proba":0.3}, #Obstacle proportion
                 using_seg_input=False,
                 channel_env = None,
                 eval_n = 10): #not starting training until  x steps
