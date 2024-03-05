@@ -17,11 +17,10 @@
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/explore.gif" alt="Navigation in the maze after training">
 </div>
 
-
-![Description of the GIF](https://github.com/PaperID1776/NAVIndoor/blob/main/explore.gif "Optional title")
-
-
 ## Real world deployment
 
-![Description of the GIF](https://github.com/PaperID1776/NAVIndoor/blob/main/output.gif "Optional title")
+We show in our submission that the model's outputs correlates well with real world characteristics. Due to the lack of benchmarks for visually impaired navigation, we focus on images. Below is a real life video sample with $V_{\theta}$ plot (left), frame (center) and segmented map (right). The semantic segmentation map arrow length is related to $V_{\theta}$ and its color is a treshold on it.
 
+<div align="center">
+  <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/output.gif" alt="Real world deployment">
+</div>
