@@ -10,4 +10,13 @@
 | **decreasing_reward**| Decreases the reward when agent stays in contact with a collider (wall/obstacle). | True/False       | False   |
 | **coin_visible**     | Coins visibility by the camera.                                         | True/False       | True    |
 
+
+## Navigation in the maze after training
+
 ![Description of the GIF](https://github.com/PaperID1776/NAVIndoor/blob/main/explore.gif "Optional title")
+
+
+## Real world deployment
+
+![Description of the GIF](https://github.com/PaperID1776/NAVIndoor/blob/main/output.gif "Optional title")
+
