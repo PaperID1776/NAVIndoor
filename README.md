@@ -20,7 +20,7 @@ List of customizable parameters for the enrivonments is presented below.
 | **coin_visible**     | Coins visibility by the camera.                                         | True/False       | True    |
 
 
-With decrease reward parameter False, the reward function `R(t)` at time `t` is defined as follows:
+The default reward function `R` is defined as follows:
 - `-1` if the agent collides with an obstacle,
 - `-0.5` if the agent collides with a wall,
 - `5` if the agent collects a coin,
