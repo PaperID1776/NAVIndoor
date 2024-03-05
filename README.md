@@ -13,6 +13,11 @@
 
 ## Navigation in the maze after training
 
+<div align="center">
+  <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/explore.gif" alt="Navigation in the maze after training">
+</div>
+
+
 ![Description of the GIF](https://github.com/PaperID1776/NAVIndoor/blob/main/explore.gif "Optional title")
 
 
