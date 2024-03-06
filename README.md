@@ -31,7 +31,7 @@ The default reward function `R` is defined as follows:
 
 ## Training in NavIndoor
 
-We propose a demo notebook implementing D3QN for training in NavIndoor
+We propose a `Demo_01` notebook implementing D3QN for training in NavIndoor.
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/arch.png" alt="Navigation in the maze after training">
@@ -40,7 +40,7 @@ We propose a demo notebook implementing D3QN for training in NavIndoor
 
 ## Navigation in the maze after training
 
-A model checkpoint is available in `checkpoint/checkpoint.pt`. 
+A model checkpoint is available in `checkpoint/checkpoint.pt` and allows to clip virtual navigation easily through `Demo_02' notebook.
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/explore.gif" alt="Navigation in the maze after training">
@@ -48,7 +48,7 @@ A model checkpoint is available in `checkpoint/checkpoint.pt`.
 
 ## Real world deployment
 
-We show in our submission that the model's outputs correlates well with real world characteristics. Due to the lack of benchmarks for visually impaired navigation, we focus on images. Below is a real life video sample with $V_{\theta}$ plot (left), frame (center) and segmented map (right). The semantic segmentation map arrow length is related to $V_{\theta}$ and its color is a treshold on it.
+We show in our submission that the model's outputs correlates well with real world characteristics. Due to the lack of benchmarks for visually impaired navigation, we focus on images there ; here is presented the $V_{\theta}$ feature learnes in NavIndoor in a real video. The image displays $V_{\theta}$ plot (left), current RGB frame (center) and its associated segmented map (right). The arrow length is related to $V_{\theta}$ and its color is a simple treshold on it, aiming to reproduce a potential signal to be delivered to a sensory substitution system.
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/output.gif" alt="Real world deployment">
