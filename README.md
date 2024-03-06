@@ -1,6 +1,6 @@
 # NAVIndoor
 
-NavIndoor is a sophisticated tool developped for implementation of the NavImpaired method. It is designed for the acquisition of navigational data within procedurally generated environments and was developed with Unity and its MLAgents library. NavIndoor generates it generates static indoor environments that are filled with obstacles, walls and collectible coins. 
+NavIndoor is a program developped for implementation of the NavImpaired method. It is designed for the acquisition of navigational data within procedurally generated environments and was developed with Unity and its MLAgents library. NavIndoor generates it generates static indoor environments that are filled with obstacles, walls and collectible coins. 
 
 Observations include two 128 x 128 x 3 frames for RGB and semantic segmentation maps of the current view.
 
@@ -27,7 +27,13 @@ The default reward function `R` is defined as follows:
 - `0` otherwise.
 
 
+## Training in NavIndoor
+
+We propose a demo notebook implementing D3QN for training in NavIndoor
+
 ## Navigation in the maze after training
+
+A model checkpoint is available in `checkpoint/checkpoint.pt`. 
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/explore.gif" alt="Navigation in the maze after training">
