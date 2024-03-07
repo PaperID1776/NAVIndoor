@@ -1,14 +1,12 @@
 # NAVIndoor
 
-NavIndoor is a program developped for implementation of the NavImpaired method. It is designed for the acquisition of navigational data within procedurally generated environments and was developed with Unity and its MLAgents library. It starts from closed cells and a virtual agent wearing a head-mounted camera (a), leverages Depth First Search algorithm for mazes procedural generation (b) and fill it with obstacles and coins (c). Observations include current view of the scene from a basic camera (d), and from a camera designed to output semantic segmentation maps highlighting floor, walls, obstacles, and coins (e). Both has size 128 x 128 x 3. Possible actions for the agent are forward, backward, rotation right, rotation left.
-
+NavIndoor is a program developed to implement the NavImpaired method. It facilitates the acquisition of navigational data within procedurally generated environments and was created using Unity and its MLAgents library. The process begins with closed cells and a virtual agent equipped with a head-mounted camera (a), utilizes the Depth First Search algorithm for maze procedural generation (b), and populates it with obstacles and coins (c). Observations consist of the current scene view captured by a basic camera (d), and by a camera specifically designed to produce semantic segmentation maps, highlighting floor, walls, obstacles, and coins (e). Both views have dimensions of 128 x 128 x 3. The possible actions for the agent include moving forward, moving backward, rotating right, and rotating left.
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/maze_gen.png" alt="Navigation in the maze after training">
 </div>
 
 List of customizable parameters for the environments is presented below.
-
 
 
 | Parameter            | Description                                                              | Range            | Default |
@@ -48,13 +46,13 @@ A model checkpoint is available in `checkpoint/checkpoint.pt` and allows to clip
 
 ## Real world deployment
 
-We showed in our submission that the model's outputs correlates well with real world characteristics for static images with small FOV. A video was captured with a smarthphone to exhibit potential navigational features that could be extracted in real time using NavImpaired using `Demo_03` notebook.
+We demonstrated in our submission that the model's outputs correlate well with real-world characteristics for static images with a small field of view (FOV). A video was captured with a smartphone to showcase potential navigational features that could be extracted in real-time using NavImpaired through the 'Demo_03' notebook.
 
-The generated figures exhibit a dynamic plot of $V_{\theta}$ over time on the left, providing insights into the temporal evolution of the environment. The resized video is on the center.
+The generated figures include a dynamic plot of $V_{\theta}$ over time on the left, providing insights into the temporal evolution of the environment. In the center, the resized video is displayed.
 
-To the right, the final image displays the input semantic segmentation maps used by NavImpaired. T top arrow length is proportional to $V_{\theta}(s)$,  with its color indicating a simple thresholding mechanism applied to simulate a potential signal for sensory substitution systems.
+On the right, the final image shows the input semantic segmentation maps used by NavImpaired. The length of the top arrow is proportional to $V_{\theta}(s)$, with its color indicating a simple thresholding mechanism applied to simulate a potential signal for sensory substitution systems.
 
-Moreover, the bottom arrows' lengths represent the softmax values on $A_{\theta}(s,a)$ for forward, backward, rotate left, and rotate right actions. The colored arrow, depicted in dark green, signifies the optimal action policy determined by the model.. We observe correlation between  $A_{\theta}(s,forward)$, $V_{\theta}(s)$ and the path clearance in front of the cameraman.
+Furthermore, the lengths of the bottom arrows represent the softmax values on $A_{\theta}(s,a)$ for the forward, backward, rotate left, and rotate right actions. The colored arrow, depicted in dark green, signifies the optimal action policy determined by the model. We observe a correlation between $A_{\theta}(s,forward)$, $V_{\theta}(s)$, and the path clearance in front of the cameraman.
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/video_processing/output_sample.gif" alt="Real world deployment">
