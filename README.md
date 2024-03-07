@@ -1,12 +1,12 @@
 # NAVIndoor
 
-NavIndoor is a program developped for implementation of the NavImpaired method. It is designed for the acquisition of navigational data within procedurally generated environments and was developed with Unity and its MLAgents library. It starts from closed cells and a virtual agent wearing a head-mounted camera (a), leverages Depth First Search algorithm for mazes procedural generation (b) and fill it with obstacles and coins (c). Observations include current view of the scene from a basic camera (d), and from a camera designed to output semantic segmentation maps highlighting floor, walls, obstacles, and coins (e). Both views has size 128 x 128 x 3.
+NavIndoor is a program developped for implementation of the NavImpaired method. It is designed for the acquisition of navigational data within procedurally generated environments and was developed with Unity and its MLAgents library. It starts from closed cells and a virtual agent wearing a head-mounted camera (a), leverages Depth First Search algorithm for mazes procedural generation (b) and fill it with obstacles and coins (c). Observations include current view of the scene from a basic camera (d), and from a camera designed to output semantic segmentation maps highlighting floor, walls, obstacles, and coins (e). Both has size 128 x 128 x 3. Possible actions for the agent are forward, backward, rotation right, rotation left.
+
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/maze_gen.png" alt="Navigation in the maze after training">
 </div>
 
-Possible actions for the agent are forward, backward, rotation right, rotation left.
 List of customizable parameters for the environments is presented below.
 
 
@@ -48,7 +48,7 @@ A model checkpoint is available in `checkpoint/checkpoint.pt` and allows to clip
 
 ## Real world deployment
 
-We showed in our submission that the model's outputs correlates well with real world characteristics for static images with small FOV. `Demo_03` allows to process a real-world videos (sample output displayed below). The generated figures includes a dynamic plot of $V_{\theta}$ over time (left) and the resizes video (center).
+We showed in our submission that the model's outputs correlates well with real world characteristics for static images with small FOV. A video was captured with a smarthphone to exhibit potential navigational features that could be extracted in real time using NavImpaired using `Demo_03` notebook.
 
 The generated figures exhibit a dynamic plot of $V_{\theta}$ over time on the left, providing insights into the temporal evolution of the environment. The resized video is on the center.
 
