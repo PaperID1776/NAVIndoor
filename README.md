@@ -32,7 +32,7 @@ The default reward function `R` is defined as follows:
 We propose a `Demo_01` notebook implementing D3QN for training in NavIndoor.
 
 <div align="center">
-  <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/arch.png" alt="Navigation in the maze after training">
+  <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/arch2.png" alt="Navigation in the maze after training">
 </div>
 
 
