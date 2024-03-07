@@ -6,8 +6,8 @@ NavIndoor is a program developped for implementation of the NavImpaired method. 
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/maze_gen.png" alt="Navigation in the maze after training">
 </div>
 
-
-List of customizable parameters for the enrivonments is presented below.
+Possible actions for the agent are forward, backward, rotation right, rotation left.
+List of customizable parameters for the environments is presented below.
 
 
 
@@ -40,7 +40,7 @@ We propose a `Demo_01` notebook implementing D3QN for training in NavIndoor.
 
 ## Navigation in the maze after training
 
-A model checkpoint is available in `checkpoint/checkpoint.pt` and allows to clip virtual navigation easily through `Demo_02' notebook.
+A model checkpoint is available in `checkpoint/checkpoint.pt` and allows to clip virtual navigation easily through `Demo_02` notebook.
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/images/explore.gif" alt="Navigation in the maze after training">
@@ -48,7 +48,13 @@ A model checkpoint is available in `checkpoint/checkpoint.pt` and allows to clip
 
 ## Real world deployment
 
-We show in our submission that the model's outputs correlates well with real world characteristics. Due to the lack of benchmarks for visually impaired navigation, we focus on images there ; `Demo_03` allows to process a real-world video (sample output displayed below). The generated figures includes a dynamic plot of $V_{\theta}$ over time (left) and the resizes video (center). The last image displays the input semantic segmentation maps used as input for NavImpaired (right). Top arrow length is proportional to $V_{\theta}(s)$ and color is a simple threshold on it, aiming to reproduce a potential signal to be delivered to a sensory substitution system. Bottom arrow lengths are softmax on $A_{\theta}(s,a)$ for every possible move (forward, backward, rotate left, rotate right). We observe correlation between  $A_{\theta}(s,forward)$, $V_{\theta}(s)$ and the path clearance in front of the cameraman.
+We showed in our submission that the model's outputs correlates well with real world characteristics for static images with small FOV. `Demo_03` allows to process a real-world videos (sample output displayed below). The generated figures includes a dynamic plot of $V_{\theta}$ over time (left) and the resizes video (center).
+
+The generated figures exhibit a dynamic plot of $V_{\theta}$ over time on the left, providing insights into the temporal evolution of the environment. The resized video is on the center.
+
+To the right, the final image displays the input semantic segmentation maps used by NavImpaired. T top arrow length is proportional to $V_{\theta}(s)$,  with its color indicating a simple thresholding mechanism applied to simulate a potential signal for sensory substitution systems.
+
+Moreover, the bottom arrows' lengths represent the softmax values on $A_{\theta}(s,a)$ for forward, backward, rotate left, and rotate right actions. The colored arrow, depicted in dark green, signifies the optimal action policy determined by the model.. We observe correlation between  $A_{\theta}(s,forward)$, $V_{\theta}(s)$ and the path clearance in front of the cameraman.
 
 <div align="center">
   <img src="https://github.com/PaperID1776/NAVIndoor/blob/main/video_processing/output_sample.gif" alt="Real world deployment">
